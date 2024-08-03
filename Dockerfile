@@ -1,7 +1,7 @@
 FROM eclipse-temurin:21 AS build
 COPY . /app
 WORKDIR /app
-RUN .gradlew bootJar
+RUN ./gradlew bootJar
 RUN mv -f build/libs/*.jar app.jar
 
 FROM eclipse-temurin:21
